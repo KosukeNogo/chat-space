@@ -1,0 +1,36 @@
+.Chat-main
+  .Chat-main__group-info
+    .Chat-main__group-info__items
+      .Chat-main__group-info__items__group-name
+        tech-camp
+      .Chat-main__group-info__items__member-name
+        member : masa
+    .Chat-main__group-info__button
+      %input.Chat-main__group-info__button__editBtn{"type": "button", "onclick": "location.href='#'", "value": "Edit"}
+      %span<>
+
+  .Chat-main__message-list
+    .Chat-main__message-list__info
+      .Chat-main__message-list__info__member-name
+        masa
+      .Chat-main__message-list__info__date
+        2020/11/28(Sat) 17:00:00
+    .Chat-main__message-list__message
+      おめでとう
+    .Chat-main__message-list__info
+      .Chat-main__message-list__info__member-name
+        たかし
+      .Chat-main__message-list__info__date
+        2020/11/28(Sat) 17:00:00
+    .Chat-main__message-list__message
+      今日は雨
+  
+  .Chat-main__message-form
+    .Chat-main__message-form__items
+      %input.Chat-main__message-form__items__form{"placeholder": "type a message", "type": "text"}
+      .Chat-main__message-form__items__imageselector
+        %label{class: "Chat-main__message-form__items__imageselector__image"}
+          = icon('fas', 'image')
+          %input{type: "file"}
+    .Chat-main__message-form__button
+      %input.Chat-main__message-form__button__sendBtn{"type": "submit", "value": "Send"}

@@ -1,0 +1,7 @@
+//以下の記述を追加（2020.11.28）
+@import "reset";
+@import "modules/messages"; //""内冒頭に/がついているとエラーが出るので注意
+
+//font-awesomeを使用するための記述（2020.11.28）
+@import "font-awesome-sprockets";
+@import "font-awesome";
