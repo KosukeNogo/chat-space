@@ -8,7 +8,7 @@
     .Chat-main__group-info__button
       %input.Chat-main__group-info__button__editBtn{"type": "button", "onclick": "location.href='#'", "value": "Edit"}
       %span<>
-  //
+
   .Chat-main__message-list
     .Chat-main__message-list__info
       .Chat-main__message-list__info__member-name
@@ -24,7 +24,7 @@
         2020/11/28(Sat) 17:00:00
     .Chat-main__message-list__message
       今日は雨
-  //
+  
   .Chat-main__message-form
     .Chat-main__message-form__items
       %input.Chat-main__message-form__items__form{"placeholder": "type a message", "type": "text"}
@@ -32,6 +32,5 @@
         %label{class: "Chat-main__message-form__items__imageselector__image"}
           = icon('fas', 'image')
           %input{type: "file"}
-
     .Chat-main__message-form__button
       %input.Chat-main__message-form__button__sendBtn{"type": "submit", "value": "Send"}

@@ -15,16 +15,14 @@
   background-color: #253141;
   &__user-name{
     height: 100px;
-    //background-color: #9dd82f;
     display: flex;
-    align-items: center;  //上下中央に配置
-    padding-left: 20px;   //左に20pxパディング
+    align-items: center;
+    padding-left: 20px;
     &__top-items{
       width: 260px;
       height: 20px;
       display: flex;
       justify-content: space-between;
-      //background-color: gold;
       &__name{
         font-size: 16px;
         color: #ffffff;
@@ -32,7 +30,6 @@
       }
       &__icon{
         width: 60px;
-        //background-color: aqua;
         text-align: right;
         &__edit{
           color: #ffffff;
@@ -67,7 +64,6 @@
 .Chat-main{
   width: calc(100vw - 300px);
   height: 100vh;
-  //background-color: gold;
   display: block;
   align-items: stretch;
   &__group-info{
@@ -79,7 +75,6 @@
 
     &__items{
       width: 200px;
-      //background-color: #d8812f;
       padding: 35px 40px 0px 40px;
       &__group-name{
         font-size: 20px;
@@ -111,7 +106,6 @@
 
   &__message-list {
     height: calc(100vh - 100px - 90px);
-    //background-color: #18944c;
     background-color: #fafafa;
     padding: 0px 0px 0px 40px;
     &__info{
@@ -136,7 +130,6 @@
   //
   &__message-form{
     height: 90px;
-    //background-color: #e62828;
     background-color: #d2d2d2;
     display: flex;
     justify-content: space-between;
