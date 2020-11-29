@@ -1,0 +1,26 @@
+.Side_bar
+  .Side-bar__user-name
+    .Side-bar__user-name__top-items
+      .Side-bar__user-name__top-items__name
+        masa
+      .Side-bar__user-name__top-items__icon
+        = link_to class: "Side-bar__user-name__top-items__icon__edit" do
+          = icon('fa', 'edit', class: "Side-bar__user-name__top-items__icon__edit")
+          %span<>
+        = link_to "#", class: "Side-bar__user-name__top-items__icon__cog" do
+          = icon('fa', 'cog', class: "Side-bar__user-name__top-items__icon__cog")
+          %span<>
+  .Side-bar__group-list
+    .Side-bar__group-list__top-items
+      .Side-bar__group-list__top-items__name
+        tech-camp
+      .Side-bar__group-list__top-items__status
+        まだメッセージはありません
+    .Side-bar__group-list__top-items
+      .Side-bar__group-list__top-items__name
+        tech-camp
+      .Side-bar__group-list__top-items__status
+        まだメッセージはありません
+
+    
+

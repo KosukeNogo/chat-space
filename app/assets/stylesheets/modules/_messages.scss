@@ -1,0 +1,187 @@
+/*「*」というセレクタは、全ての要素に適用させるという意味 */
+/* paddingやborderの設定を行っても、要素の大きさがwidthやheightで指定したサイズのまま変わらなくなる */
+*{
+  box-sizing: border-box;
+}
+
+.Whole
+{
+  display: flex;
+}
+
+.Side-bar{
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+  &__user-name{
+    height: 100px;
+    //background-color: #9dd82f;
+    display: flex;
+    align-items: center;  //上下中央に配置
+    padding-left: 20px;   //左に20pxパディング
+    &__top-items{
+      width: 260px;
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      //background-color: gold;
+      &__name{
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: bold;
+      }
+      &__icon{
+        width: 60px;
+        //background-color: aqua;
+        text-align: right;
+        &__edit{
+          color: #ffffff;
+        }
+        &__cog{
+          color: #ffffff;
+          margin: 0px 0px 0px 5px;
+        }
+      }
+    }
+  }
+  &__group-list {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    &__top-items{
+      padding: 20px 20px 20px 20px;
+      &__name{
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      &__status{
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5px 0px 0px 0px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.Chat-main{
+  width: calc(100vw - 300px);
+  height: 100vh;
+  //background-color: gold;
+  display: block;
+  align-items: stretch;
+  &__group-info{
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+
+    &__items{
+      width: 200px;
+      //background-color: #d8812f;
+      padding: 35px 40px 0px 40px;
+      &__group-name{
+        font-size: 20px;
+        color: #333333;
+      }
+      &__member-name{
+        font-size: 12px;
+        color: #999999;
+        padding: 15px 0px 0px 0px;
+      }
+    }
+    &__button{
+      text-align: center;
+      width: 72px;
+      height: 40px;
+      background-color: #38aef0;
+      margin: 28px 40px 0px 0px;
+      &__editBtn{
+        width: 72px;
+        height: 40px;
+        color: #38aef0;
+        font-size: 16px;
+        padding: 0px 20px 0px 20px;
+        background-color: #ffffff;
+        border: 2px solid #38aef0;
+      }
+    }
+  }
+
+  &__message-list {
+    height: calc(100vh - 100px - 90px);
+    //background-color: #18944c;
+    background-color: #fafafa;
+    padding: 0px 0px 0px 40px;
+    &__info{
+      display: flex;
+      padding: 36px 0px 0px 0px;
+      &__member-name{
+        font-size: 16px;
+        color: #333333;
+      }
+      &__date{
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__message{
+      font-size: 14px;
+      color: #434A54;
+      padding: 12px 0px 11px 0px;
+    }
+  }
+
+  //
+  &__message-form{
+    height: 90px;
+    //background-color: #e62828;
+    background-color: #d2d2d2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__items{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0px 15px 0px 40px;
+      background-color: #9dd82f;
+
+      position: relative;
+      &__form{
+        text-align: left;
+        width: 100%;
+        height: 50px;
+        padding: 0px 0px 0px 10px;
+      }
+      &__imageselector{
+        &__image{
+          input{
+            display: none;
+          }
+          position: absolute;
+          right: 10px;
+          top: 10pt;
+        }
+      }
+    }
+    &__button{
+      display: flex;
+      justify-content: left;
+      margin: 0px 40px 0px 0px;
+      &__sendBtn{
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #38aef0;
+        border: 0px solid #38aef0;
+        padding: 0px 30px 0px 30px;
+      }
+    }
+  }
+}
