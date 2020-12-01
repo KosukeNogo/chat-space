@@ -58,3 +58,6 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
 # FontAwesomeを導入（2020.11.28）
 gem 'font-awesome-sass'
+
+# deviseの導入（2020.12.01）
+gem 'devise'
