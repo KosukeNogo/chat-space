@@ -2,12 +2,12 @@
   .Side-bar__user-name
     .Side-bar__user-name__top-items
       .Side-bar__user-name__top-items__name
-        masa
+        = current_user.name
       .Side-bar__user-name__top-items__icon
         = link_to class: "Side-bar__user-name__top-items__icon__edit" do
           = icon('fa', 'edit', class: "Side-bar__user-name__top-items__icon__edit")
           %span<>
-        = link_to "#", class: "Side-bar__user-name__top-items__icon__cog" do
+        = link_to edit_user_path(current_user), class: "Side-bar__user-name__top-items__icon__cog" do
           = icon('fa', 'cog', class: "Side-bar__user-name__top-items__icon__cog")
           %span<>
 
