@@ -4,7 +4,8 @@
       .Side-bar__user-name__top-items__name
         = current_user.name
       .Side-bar__user-name__top-items__icon
-        = link_to class: "Side-bar__user-name__top-items__icon__edit" do
+        //new_group_path()で合っているのだろうか？？（2020.12.02）
+        = link_to new_group_path(), class: "Side-bar__user-name__top-items__icon__edit" do
           = icon('fa', 'edit', class: "Side-bar__user-name__top-items__icon__edit")
           %span<>
         = link_to edit_user_path(current_user), class: "Side-bar__user-name__top-items__icon__cog" do
