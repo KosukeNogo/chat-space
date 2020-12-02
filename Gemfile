@@ -61,3 +61,6 @@ gem 'font-awesome-sass'
 
 # deviseの導入（2020.12.01）
 gem 'devise'
+
+# pry-railsの導入（2020.12.02）
+gem 'pry-rails'
