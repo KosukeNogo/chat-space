@@ -13,16 +13,10 @@
           %span<>
 
   .Side-bar__group-list
-    .Side-bar__group-list__top-items
-      .Side-bar__group-list__top-items__name
-        tech-camp
-      .Side-bar__group-list__top-items__status
-        まだメッセージはありません
-    .Side-bar__group-list__top-items
-      .Side-bar__group-list__top-items__name
-        tech-camp
-      .Side-bar__group-list__top-items__status
-        まだメッセージはありません
-
-    
-
+    - current_user.groups.each do |group|
+      .Side-bar__group-list__top-items
+        = link_to '#' do
+          .Side-bar__group-list__top-items__name
+            = group.name
+          .Side-bar__group-list__top-items__status
+            まだメッセージはありません
