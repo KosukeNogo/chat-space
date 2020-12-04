@@ -64,3 +64,9 @@ gem 'devise'
 
 # pry-railsの導入（2020.12.02）
 gem 'pry-rails'
+
+# carrierwaveの導入（2020.12.04）
+gem 'carrierwave'
+
+# mini_magickの導入（2020.12.04）
+gem 'mini_magick'
