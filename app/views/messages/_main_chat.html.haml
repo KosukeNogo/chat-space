@@ -2,9 +2,13 @@
   .Chat-main__group-info
     .Chat-main__group-info__items
       .Chat-main__group-info__items__group-name
-        tech-camp
+        = @group.name # なぜ、group.nameではダメなのか？
       .Chat-main__group-info__items__member-name
-        member : masa
+        = "Member:&nbsp;".html_safe + @group.users.pluck(:name).join("&nbsp;").html_safe
+        /= "Member:" + @group.users.pluck(:name).join("&nbsp;".html_safe)
+        /= form_with model: @group, local: true do |f|
+        /  = f.text_field :name
+
     .Chat-main__group-info__button
       %input.Chat-main__group-info__button__editBtn{"type": "button", "onclick": "location.href='#'", "value": "Edit"}
       %span<>
