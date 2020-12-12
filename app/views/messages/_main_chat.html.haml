@@ -10,27 +10,16 @@
       %span<>
 
   .Chat-main__message-list
-    .Chat-main__message-list__info
-      .Chat-main__message-list__info__member-name
-        masa
-      .Chat-main__message-list__info__date
-        2020/11/28(Sat) 17:00:00
-    .Chat-main__message-list__message
-      おめでとう
-    .Chat-main__message-list__info
-      .Chat-main__message-list__info__member-name
-        たかし
-      .Chat-main__message-list__info__date
-        2020/11/28(Sat) 17:00:00
-    .Chat-main__message-list__message
-      今日は雨
-  
+    = render @messages # 左の記述は右記の記述の略 = render partial: 'message', collection: @messages
+
   .Chat-main__message-form
-    .Chat-main__message-form__items
-      %input.Chat-main__message-form__items__form{"placeholder": "type a message", "type": "text"}
-      .Chat-main__message-form__items__imageselector
-        %label{class: "Chat-main__message-form__items__imageselector__image"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-    .Chat-main__message-form__button
-      %input.Chat-main__message-form__button__sendBtn{"type": "submit", "value": "Send"}
+    = form_with model: [@group, @message], local: true do |f|
+      .Chat-main__message-form__items
+        .Chat-main__message-form__items__form
+          = f.text_field :content, placeholder: 'type a messagepe'
+          = f.label :image, class: 'Chat-main__message-form__items__imageselector' do
+            = icon('fas', 'image', class: 'Chat-main__message-form__items__imageselector__image')
+            = f.file_field :image
+            /= f.file_field :image, class: 'Hidden'
+      .Chat-main__message-form__button
+        = f.submit 'Send', class: 'Chat-main__message-form__button__sendBtn'

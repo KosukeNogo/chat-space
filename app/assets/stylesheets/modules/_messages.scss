@@ -133,7 +133,7 @@
     background-color: #d2d2d2;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    //align-items: center;
 
     &__items{
       width: 100%;
@@ -167,7 +167,7 @@
       margin: 0px 40px 0px 0px;
       &__sendBtn{
         text-align: center;
-        width: 100%;
+        width: auto;
         height: 50px;
         color: #ffffff;
         font-size: 16px;

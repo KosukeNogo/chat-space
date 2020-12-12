@@ -15,8 +15,8 @@
   .Side-bar__group-list
     - current_user.groups.each do |group|
       .Side-bar__group-list__top-items
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .Side-bar__group-list__top-items__name
             = group.name
           .Side-bar__group-list__top-items__status
-            まだメッセージはありません
+            = group.show_last_message # groupモデルのインスタンスメソッドであるshow_last_messageを実行
