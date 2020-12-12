@@ -4,13 +4,12 @@
       .Chat-main__group-info__items__group-name
         = @group.name # なぜ、group.nameではダメなのか？
       .Chat-main__group-info__items__member-name
+        / https://qiita.com/Utronic55/items/5d823a0ccae52e1a0c0e
         = "Member:&nbsp;".html_safe + @group.users.pluck(:name).join("&nbsp;").html_safe
-        /= "Member:" + @group.users.pluck(:name).join("&nbsp;".html_safe)
-        /= form_with model: @group, local: true do |f|
-        /  = f.text_field :name
 
     .Chat-main__group-info__button
       / ボタンにリンク貼るのに苦戦した・・・
+      / https://qiita.com/SUGISHIA/items/d4d8b48be48767c17815
       %input.Chat-main__group-info__button__editBtn{"type": "button", "onclick": "location.href= './edit'", "value": "Edit"}
       %span<>
 
