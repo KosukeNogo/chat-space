@@ -16,14 +16,21 @@
   .Chat-main__message-list
     = render @messages # 左の記述は右記の記述の略 = render partial: 'message', collection: @messages
 
-  .Chat-main__message-form
-    = form_with model: [@group, @message], local: true do |f|
-      .Chat-main__message-form__items
-        .Chat-main__message-form__items__form
-          = f.text_field :content, placeholder: 'type a messagepe'
-          = f.label :image, class: 'Chat-main__message-form__items__imageselector' do
-            = icon('fas', 'image', class: 'Chat-main__message-form__items__imageselector__image')
-            = f.file_field :image
-            /= f.file_field :image, class: 'Hidden'
-      .Chat-main__message-form__button
-        = f.submit 'Send', class: 'Chat-main__message-form__button__sendBtn'
+  .Chat-main__message-bottom
+    = form_with model: [@group, @message], html: {class: "Chat-main__message-bottom__form"},local: true do |f|
+      .Chat-main__message-bottom__form__comment
+        = f.text_field :content, class: 'Chat-main__message-bottom__form__comment__form', placeholder: 'type a messagepe'
+        = f.label :image, class: 'Chat-main__message-bottom__form__comment__image' do
+          = icon('fas', 'image', class: 'Chat-main__message-bottom__form__comment__image__icon')
+          = f.file_field :image, class: 'Chat-main__message-bottom__form__comment__image__hidden'
+      = f.submit 'Send', class: 'Chat-main__message-bottom__form__button'
+
+  /.Chat-main__message-form
+  /  = form_with model: [@group, @message], html: 'Chat-main__message-form__items',local: true do |f|
+  /      = f.text_field :content, class: 'Chat-main__message-form__items__form', placeholder: 'type a messagepe'
+  /      = f.label :image, class: 'Chat-main__message-form__items__imageselector' do
+  /        = icon('fas', 'image', class: 'Chat-main__message-form__items__imageselector__image')
+  /          /= f.file_field :image, class: 'Hidden'
+  /          /= f.file_field :image, class: 'Hidden'
+  /  .Chat-main__message-form__button
+  /    = f.submit 'Send', class: 'Chat-main__message-form__button__sendBtn'
