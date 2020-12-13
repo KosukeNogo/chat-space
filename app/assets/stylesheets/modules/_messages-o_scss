@@ -36,7 +36,7 @@
         }
         &__cog{
           color: #ffffff;
-          margin: 0px 0px 0px 2.5px;
+          margin: 0px 0px 0px 5px;
         }
       }
     }
@@ -129,59 +129,52 @@
   }
 
   //
-  &__message-bottom{
+  &__message-form{
     height: 90px;
     background-color: #d2d2d2;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &__form{
+    &__items{
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 0px 40px 0px 40px;
-
-      &__comment{
+      margin: 0px 15px 0px 40px;
+      background-color: #9dd82f;
+      position: relative;
+      
+      &__form{
         text-align: left;
         width: 100%;
         height: 50px;
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        &__form
-        {
-          text-align: left;
-          width: 100%;
-          height: 50px;
-          border: none;
-          padding-left: 10px;
-        }
-
-        &__image
-        {
-          display: flex;
-          align-items: center;
-          &__icon{
-            position: absolute;
-            right: 10px;
-          }
-          &__hidden{
+        padding: 0px 0px 0px 10px;
+      }
+      &__imageselector{
+        &__image{
+          input{
             display: none;
           }
+          position: absolute;
+          right: 10px;
+          top: 10pt;
         }
       }
-
-      &__button{
-        background-color: #38aef0;
+    }
+    &__button{
+      display: flex;
+      justify-content: left;
+      margin: 0px 40px 0px 0px;
+      &__sendBtn{
+        text-align: center;
+        width: auto;
         height: 50px;
-        color: #fff;
+        color: #ffffff;
         font-size: 16px;
+        background-color: #38aef0;
+        border: 0px solid #38aef0;
         padding: 0px 30px 0px 30px;
-        margin: 0px 0px 0px 15px;
-        border: none;
       }
     }
   }

@@ -64,3 +64,6 @@ gem 'devise'
 
 # pry-railsの導入（2020.12.02）
 gem 'pry-rails'
+
+gem 'carrierwave'
+gem 'mini_magick'
