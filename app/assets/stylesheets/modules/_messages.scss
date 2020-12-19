@@ -109,6 +109,7 @@
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     padding: 0px 0px 0px 40px;
+    overflow: scroll;
     &__info{
       display: flex;
       padding: 36px 0px 0px 0px;

@@ -1,36 +1,38 @@
 $(function(){
   function buildHTML(message){
     if (message.image){
-      let html = `<div class="Chat-main__message-list">
-        <div class="Chat-main__message-list__info">
-          <div class="Chat-main__message-list__info__member-name">
-            ${message.user_name}
+      let html = 
+        `<div class="Chat-main__message-list">
+          <div class="Chat-main__message-list__info">
+            <div class="Chat-main__message-list__info__member-name">
+              ${message.user_name}
+            </div>
+            <div class="Chat-main__message-list__info__date">
+              ${message.created_at}
+            </div>
+         </div>
+          <div class="Chat-main__message-list__message">
+            ${message.content}
+            <img class="Message__image" src="${message.image}"
           </div>
-          <div class="Chat-main__message-list__info__date">
-            ${message.created_at}
-          </div>
-        </div>
-        <div class="Chat-main__message-list__message">
-          ${message.content}
-          <img class="Message__image" src="${message.image}"
-        </div>
-      </div>`
-    return html;
+        </div>`
+      return html;
     } else {
-      let html = `<div class="Chat-main__message-list">
-        <div class="Chat-main__message-list__info">
-          <div class="Chat-main__message-list__info__member-name">
-            ${message.user_name}
+      let html = 
+        `<div class="Chat-main__message-list">
+          <div class="Chat-main__message-list__info">
+            <div class="Chat-main__message-list__info__member-name">
+              ${message.user_name}
+            </div>
+            <div class="Chat-main__message-list__info__date">
+              ${message.created_at}
+            </div>
           </div>
-          <div class="Chat-main__message-list__info__date">
-            ${message.created_at}
+          <div class="Chat-main__message-list__message">
+            ${message.content}
           </div>
-        </div>
-        <div class="Chat-main__message-list__message">
-          ${message.content}
-        </div>
-      </div>`
-    return html;
+        </div>`
+      return html;
     }
   }
   $('.Chat-main__message-bottom__form').on('submit', function(e){
@@ -47,7 +49,9 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.Chat-main__message-list').append(html);      
+      $('.Chat-main__message-list').append(html);
+      $('form')[0].reset();
+      $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
       $('form')[0].reset();
     })
   });
