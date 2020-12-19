@@ -28,7 +28,6 @@ $(function(){
         </div>
         <div class="Chat-main__message-list__message">
           ${message.content}
-          <img class="Message__image" src="${message.image}"
         </div>
       </div>`
     return html;
@@ -48,7 +47,8 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      console.log(html);
+      $('.Chat-main__message-list').append(html);      
+      $('form')[0].reset();
     })
   });
 });
