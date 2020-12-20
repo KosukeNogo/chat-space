@@ -2,34 +2,38 @@ $(function(){
   function buildHTML(message){
     if (message.image){
       let html = 
-        `<div class="Chat-main__message-list">
-          <div class="Chat-main__message-list__info">
-            <div class="Chat-main__message-list__info__member-name">
+        `<div class="Chat-main__midlle__message-list">
+          <div class="Chat-main__midlle__message-list__info">
+            <div class="Chat-main__midlle__message-list__info__member-name">
               ${message.user_name}
             </div>
-            <div class="Chat-main__message-list__info__date">
+            <div class="Chat-main__midlle__message-list__info__date">
               ${message.created_at}
             </div>
          </div>
-          <div class="Chat-main__message-list__message">
-            ${message.content}
-            <img class="Message__image" src="${message.image}"
+          <div class="Chat-main__midlle__message-list__message">
+            <p class="Chat-main__midlle__message-list__message__content">
+              ${message.content}
+            </p>
+            <img class="Chat-main__midlle__message-list__message__image" src="${message.image}">
           </div>
         </div>`
       return html;
     } else {
       let html = 
-        `<div class="Chat-main__message-list">
-          <div class="Chat-main__message-list__info">
-            <div class="Chat-main__message-list__info__member-name">
+        `<div class="Chat-main__midlle__message-list">
+          <div class="Chat-main__midlle__message-list__info">
+            <div class="Chat-main__midlle__message-list__info__member-name">
               ${message.user_name}
             </div>
-            <div class="Chat-main__message-list__info__date">
+            <div class="Chat-main__midlle__message-list__info__date">
               ${message.created_at}
             </div>
           </div>
-          <div class="Chat-main__message-list__message">
-            ${message.content}
+          <div class="Chat-main__midlle__message-list__message">
+            <p class="Chat-main__midlle__message-list__message__content">
+              ${message.content}
+            </p>
           </div>
         </div>`
       return html;
@@ -49,10 +53,10 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.Chat-main__message-list').append(html);
+      $('.Chat-main__midlle').append(html);
       $('form')[0].reset();
-      $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
-      $('form')[0].reset();
+      $('.Chat-main__midlle').animate({ scrollTop: $('.Chat-main__midlle')[0].scrollHeight});
+      $('.Chat-main__message-bottom__form__button').prop('disabled', false);
     })
   });
 });
