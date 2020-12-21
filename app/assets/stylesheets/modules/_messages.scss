@@ -12,12 +12,14 @@
 .Side-bar{
   width: 300px;
   height: 100vh;
-  background-color: #253141;
+  overflow: scroll;
+  background-color: #2f3e51;
   &__user-name{
     height: 100px;
     display: flex;
     align-items: center;
     padding-left: 20px;
+    background-color: #253141;
     &__top-items{
       width: 260px;
       height: 20px;
@@ -42,7 +44,7 @@
     }
   }
   &__group-list {
-    height: calc(100% - 100px);
+    height: calc(auto - 100px);
     background-color: #2f3e51;
     &__top-items{
       padding: 20px 20px 20px 20px;
